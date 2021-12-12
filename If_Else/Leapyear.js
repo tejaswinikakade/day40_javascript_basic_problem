@@ -1,15 +1,21 @@
 var prompt=require('prompt-sync')();
-let date = prompt("Enter date: ");
-let Month = prompt("Enter month: ");
-date=parseInt(date);
-Month=parseInt(Month);
-if ( date <= 20 && Month == 'march' && Month == 'april' && Month == 'may' && Month == 'june' )
-{ 
-     console.log("the $Month and $date is true");
-}    
-else
+year = prompt("Input a Year : ");
+
+if (year % 4 !== 0 && year % 400 !== 0)
+ {
+
+console.log(year + " is not a leap year. Sorry bruh.");
+
+} 
+else if (year % 100 !== 0)
 {
-    console.log("false");
+
+console.log(year + " is a leap year, awsum!");
+
+} 
+else 
+{
+
+console.log(year + " it is indeed a leap year!");
+
 }
-	 
-  
